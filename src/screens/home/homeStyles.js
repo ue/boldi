@@ -20,8 +20,19 @@ export default StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     width: theme.deviceWidth,
-    paddingHorizontal: 50,
     bottom: 75,
   },
-  actionsItem: {},
+  actionsItem: {
+    width: theme.deviceWidth / 3.5,
+  },
+  infoWrapper: {
+    marginTop: 50,
+    width: theme.deviceWidth,
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+    zIndex: 30,
+  },
+  actionsItem2: {
+    marginTop: 50,
+  },
 });

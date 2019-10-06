@@ -95,17 +95,31 @@ const HomeScreen = () => {
   return (
     <View style={styles.container}>
       <View style={styles.daysWrapper}>
-        <FlatList
-          data={DATA}
-          initialScrollIndex={selectedDay}
-          renderItem={({ item }) => listItem(item)}
-          showsHorizontalScrollIndicator={false}
-          keyExtractor={item => item.id}
-          horizontal
-        />
+        {DATA.length > 0 && (
+          <FlatList
+            data={DATA}
+            initialScrollIndex={5}
+            renderItem={({ item }) => listItem(item)}
+            showsHorizontalScrollIndicator={false}
+            keyExtractor={item => item.id}
+            horizontal
+          />
+        )}
       </View>
 
-      <HumanBody goal={GOAL} steps={selectedStepCount} />
+      <View style={styles.infoWrapper}>
+        <View style={styles.actionsItem}>
+          <Title title="My Goal" size={18} variant="secondaryTitle" />
+          <Title title={GOAL} size={14} variant="subTitle" />
+        </View>
+
+        <View style={[styles.actionsItem, styles.actionsItem2]}>
+          <Title title={selectedStepCount} />
+          <Title title="steps" size={14} variant="subTitle" />
+        </View>
+      </View>
+
+      <HumanBody goal={GOAL} steps={selectedStepCount || 0} />
 
       <View style={styles.actionsWrapper}>
         <View style={styles.actionsItem}>
@@ -115,7 +129,6 @@ const HomeScreen = () => {
           />
           <Title title="cal" size={14} variant="subTitle" />
         </View>
-
         <View style={styles.actionsItem}>
           <Title
             variant="secondaryTitle"
