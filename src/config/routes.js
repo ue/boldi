@@ -18,21 +18,25 @@ const stackNavigation = createStackNavigator(
         header: () => null,
       },
     },
-    [ROUTES.SCREENS.HOME]: {
-      screen: HomeScreen,
-      navigationOptions: {
-        header: () => null,
-      },
-    },
   },
   {
     headerMode: 'none',
   },
 );
 
+const APP = createSwitchNavigator({
+  [ROUTES.SCREENS.HOME]: {
+    screen: HomeScreen,
+    navigationOptions: {
+      header: () => null,
+    },
+  },
+});
+
 const RootNavigator = createSwitchNavigator(
   {
     stackNavigation,
+    APP,
   },
   {
     initialRouteName: ROUTES.SCREENS.SPLASH,

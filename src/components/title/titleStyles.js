@@ -8,7 +8,6 @@ export default StyleSheet.create({
     color: theme.titleColor,
     fontWeight: '800',
     marginBottom: 10,
-    width: theme.deviceWidth,
     textAlign: 'center',
   },
   subTitle: {
@@ -16,5 +15,12 @@ export default StyleSheet.create({
     color: theme.subTextColor,
     fontWeight: '600',
     fontFamily: theme.primaryFont,
+  },
+  secondaryTitle: {
+    fontSize: 26,
+    color: theme.primaryTextColor,
+    fontWeight: '800',
+    fontFamily: theme.primaryFont,
+    marginBottom: 3,
   },
 });

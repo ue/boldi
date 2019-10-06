@@ -3,9 +3,9 @@ import { Text } from 'react-native';
 
 import styles from './titleStyles';
 
-const TitleView = ({ title, size = 22, variant = 'title' }) => {
+const TitleView = ({ title, size, variant = 'title' }) => {
   return (
-    <Text style={[styles.title, { fontSize: size }, styles[variant]]}>
+    <Text style={[styles.title, styles[variant], size && { fontSize: size }]}>
       {title}
     </Text>
   );

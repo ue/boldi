@@ -1,12 +1,27 @@
 import { StyleSheet } from 'react-native';
+import theme from '../../themes/defaultTheme';
 
 export default StyleSheet.create({
-  wrapper: {
+  container: {
+    flexDirection: 'column',
     flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    alignSelf: 'center',
-    backgroundColor: 'red',
   },
+  daysWrapper: {
+    marginTop: 100,
+    width: theme.deviceWidth,
+    zIndex: 10,
+  },
+  itemWrapper: {
+    marginHorizontal: 10,
+  },
+  actionsWrapper: {
+    flexDirection: 'row',
+    position: 'absolute',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    width: theme.deviceWidth,
+    paddingHorizontal: 50,
+    bottom: 75,
+  },
+  actionsItem: {},
 });

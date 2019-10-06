@@ -10,7 +10,7 @@ export default {
   secondaryButton: '#ffff',
   shadowColor: '#272E36',
   titleColor: '#1676ff',
-  primaryBackground: '#272E36',
+  primaryBackground: '#1676FF',
   secondaryBackground: '#fff',
   primaryTextColor: '#000',
   subTextColor: '#3b4f66',

@@ -15,6 +15,7 @@ const LoginScreen = () => {
       <View style={styles.questionWrapper}>
         <Title title="What is your gender?" />
         <View style={styles.genderWrapper}>
+          {/* // Should be icon but didint work */}
           <SquareButton
             title="M"
             isActive={gender === 'M'}
